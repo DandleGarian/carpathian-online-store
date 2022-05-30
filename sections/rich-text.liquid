@@ -36,6 +36,34 @@
               <div class="rich-text__text rte" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}
               </div>
+            {%- when 'image' -%}
+              <p>Wow, cool an image!!</p>
+              <style>
+                .tw-half-width {
+                  width: 50%;
+                }
+
+                .tw-margin-center {
+                  margin: 0 auto;
+                }
+              </style>
+              {% comment %} {%- liquid
+                assign image_width_classes = "custom-image"
+                if block.settings.half_width
+                  assign image_width_classes = image_width_classes | append: " tw-half-width tw-margin-center"
+                endif
+              -%} {% endcomment %}
+              <div class="media media--16-9 {% if block.settings.half_width %} tw-half-width tw-margin-center {% endif %} ">
+                {{ block.settings.image | image_url: width: 1500 | image_tag:
+                  loading: 'lazy',
+                  width: section.settings.image.width,
+                  height: section.settings.image.width,
+                  class: image_width_classes,
+                  sizes: '(min-width: 750px) 50vw, 100vw',
+                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                  alt: block.settings.image.alt | escape
+                }}
+              </div>
             {%- when 'button' -%}
               <div class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.settings.button_label != blank -%}
@@ -255,6 +283,25 @@
           "id": "text",
           "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
           "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "half_width",
+          "label": "Enable half width",
+          "default": false,
+          "info": "If this option is enabled, the image will be displayed in half width."
         }
       ]
     },

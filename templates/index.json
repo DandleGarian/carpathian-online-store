@@ -38,7 +38,7 @@
         "image": "shopify:\/\/shop_images\/toomas-tartes-Yizrl9N_eDA-unsplash.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -51,10 +51,17 @@
     "rich_text": {
       "type": "rich-text",
       "blocks": {
+        "2e419fe1-39f0-4fed-b7e5-176befd8e400": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Carpathian_Logo.png",
+            "half_width": true
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
+            "heading": "<p>Brands We’re Loving<\/p>",
             "heading_size": "h1"
           }
         },
@@ -66,6 +73,7 @@
         }
       },
       "block_order": [
+        "2e419fe1-39f0-4fed-b7e5-176befd8e400",
         "heading",
         "text"
       ],
@@ -94,7 +102,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
-        "image_ratio": "adapt",
+        "image_ratio": "16-9",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
