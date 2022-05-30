@@ -157,7 +157,11 @@
       "apply": "適用",
       "clear": "クリア",
       "clear_all": "すべてを削除する",
+<<<<<<< HEAD
       "from": "差出人",
+=======
+      "from": "から",
+>>>>>>> 81b68180b27b361f4c2c7b321ffe92c016f93e15
       "filter_and_sort": "絞り込みと並び替え",
       "filter_by_label": "絞り込み:",
       "filter_button": "絞り込む",
@@ -177,7 +181,11 @@
       "reset": "リセット",
       "sort_button": "並び替え",
       "sort_by_label": "並び替え: ",
+<<<<<<< HEAD
       "to": "受取人",
+=======
+      "to": "まで",
+>>>>>>> 81b68180b27b361f4c2c7b321ffe92c016f93e15
       "clear_filter": "絞り込みを削除する",
       "filter_selected_accessibility": "{{ type }} ({{ count }}件のフィルターを選択済み)",
       "show_more": "さらに表示する",
